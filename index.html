@@ -228,7 +228,7 @@ const cday=i=>{const c=wrapDay(i)-OFFSET;return (c>=0&&c<CDAYS)?c:null};
 const GL=DATA.G;
 const listsFor=i0=>{const i=wrapDay(i0);if(i>=2&&i<=13){const s=(i-2)*4;return [s,s+1,s+2,s+3]}if(i>=14&&i<=21){const s=(i-14)*6;return [0,1,2,3,4,5].map(x=>s+x)}return []};
 const isReview=i0=>{const i=wrapDay(i0);return i>=14&&i<=21};
-const blob=id=>"/_blob/"+id;
+const blob=id=>"audio/"+id+".mp4";
 const listWords=ls=>ls.flatMap(li=>GL[li].w.map((w,wi)=>({...w,li,wi})).filter(w=>!w.q));
 const SENTS=c=>DATA.S.filter(s=>s.d===c+1);
 const PASS=c=>[0,1,2].map(k=>DATA.P[c*3+k]);
